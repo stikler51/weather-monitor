@@ -2,7 +2,7 @@
 const apiKey = 'a37fd266dcf0de1f7a2a058e96a7cabe';
 
 async function getResponse(q) {
-  const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${q}&appid=${apiKey}`)
+  const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${q}&appid=${apiKey}&units=metric`)
     .then(resp => resp.json())
     .catch(() => {
       alert('NONONO');
