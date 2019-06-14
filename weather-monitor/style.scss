@@ -21,6 +21,7 @@
     justify-content: space-around;
     align-items: stretch;
     padding-top: 15px;
+    //height: 5vh;
 
     .search {
       display: flex;
@@ -67,3 +68,28 @@
     color: white;
   }
 }
+
+.main {
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .monitor {
+    width: 50vw;
+    height: 50vh;
+    border-radius: 10px;
+    background: url("pictures/Minsk/minsk-1.jpg") no-repeat;
+    background-size: cover;
+    //background-color: rgba(255, 255, 255, 0.2);
+
+    .monitor__info {
+      width: 50%;
+      height: 100%;
+      float: right;
+      border-radius: 0 10px 10px 0;
+    }
+  }
+}
+
+//https://hackernoon.com/how-to-do-css-only-frosted-glass-effect-e2666bafab91
