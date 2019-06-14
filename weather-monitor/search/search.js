@@ -9,14 +9,14 @@ async function getResponse(q) {
 }
 
 async function search() {
-  const q = document.body.querySelector('.search-field').value;
+  const q = document.body.querySelector('.search__field').value;
   const response = await getResponse(q)
     .then(data => data);
   console.log(response);
 }
 
 export default function initSearch() {
-  const searchButton = document.body.querySelector('.search-button');
+  const searchButton = document.body.querySelector('.search__button');
 
   searchButton.addEventListener('click', search);
 }

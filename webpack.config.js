@@ -31,7 +31,7 @@ module.exports = {
         use: ['style-loader', 'css-loader',],
       },
       {
-        test: /\.(ttf)$/,
+        test: /\.(ttf|svg)$/,
         use: [
           {
             loader: 'file-loader',
@@ -39,6 +39,13 @@ module.exports = {
           },
         ],
       },
+      // {
+      //   test: /\.svg/,
+      //   use: {
+      //     loader: 'svg-url-loader',
+      //     options: {},
+      //   },
+      // },
       {
         test: /\.(png|jpg|gif)$/i,
         use: [
