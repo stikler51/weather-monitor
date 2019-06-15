@@ -1,3 +1,5 @@
+import State from '../state/state';
+
 // const apiKey = 'a37fd266dcf0de1f7a2a058e96a7cabe';
 
 const testResponse = {
@@ -9,7 +11,7 @@ const testResponse = {
     {
       id: 800,
       main: 'Clear',
-      description: 'clear sky',
+      description: 'clearIcon sky',
       icon: '01d',
     }],
   base: 'stations',
@@ -26,7 +28,7 @@ const testResponse = {
     deg: 220,
     gust: 7,
   },
-  clouds: {
+  cloudsIcon: {
     all: 0,
   },
   dt: 1560504912,
@@ -48,6 +50,7 @@ async function getResponse() {
   // const request = `https://api.openweathermap.org/data/2.5/weather?q=${q}&appid=${apiKey}&units=metric`;
   // const response = await fetch(request)
   //   .then(resp => resp.json());
+  // return response;
 
   return testResponse;
 }
@@ -56,11 +59,17 @@ async function search() {
   // const q = document.body.querySelector('.search__field').value;
   const response = await getResponse()
     .then(data => data);
-  console.log(response);
+  const state = new State(response);
+  state.updateState();
 }
 
 export default function initSearch() {
   const searchButton = document.body.querySelector('.search__button');
 
   searchButton.addEventListener('click', search);
+  document.body.addEventListener('keypress', (e) => {
+    if (e.key === 'Enter') {
+      search();
+    }
+  });
 }
