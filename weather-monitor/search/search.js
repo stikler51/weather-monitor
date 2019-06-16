@@ -65,7 +65,7 @@ async function getResponse(q) {
 async function search() {
   const disableValidation = document.body.querySelector('.disable-validation').checked;
   const q = document.body.querySelector('.search__field').value.toLowerCase();
-  // console.log(q);
+
   if (disableValidation) {
     const response = await getResponse(q)
       .then(data => data);
@@ -81,7 +81,6 @@ async function search() {
     const state = new State(response);
     state.updateState();
   } else {
-    // document.body.removeEventListener('keypress', searchOnEnter);
     showModal(validationModalMessage);
   }
 }
