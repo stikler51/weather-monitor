@@ -1,0 +1,41 @@
+.modal {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal__window {
+  width: 70%;
+  height: 50%;
+  background: white url("assets/pictures/validation-error.jpg");
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: contain;
+
+  .message {
+    width: 60%;
+    padding-top: 40px;
+    padding-left: 40px;
+
+    .modal__close {
+      width: 80px;
+      height: 40px;
+      margin-top: 40px;
+      float: right;
+      background: white;
+      border: 2px solid grey;
+      transition: 0.4s;
+
+      &:hover {
+        border-color: #a2cbff;
+      }
+    }
+  }
+}
