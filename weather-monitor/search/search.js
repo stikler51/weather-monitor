@@ -102,3 +102,7 @@ export default function initSearch() {
   searchButton.addEventListener('click', search);
   document.body.addEventListener('keypress', searchOnEnterOrCloseModal);
 }
+
+// Запретить масштабирование на мобилах
+// Чтобы клавиатура не влияла на размер
+// Пофиксить под мой телефон

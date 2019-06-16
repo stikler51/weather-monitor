@@ -120,7 +120,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background: inherit;
+  //background: inherit;
+  //position: absolute;
 
   .monitor {
     width: 50vw;
@@ -312,6 +313,15 @@
 }
 
 @media screen and (max-width: 1024px) {
+  .main {
+    background: none;
+    .monitor {
+      background: none;
+      .monitor__right {
+        background: none;
+      }
+    }
+  }
   .validation {
     margin-top: 20px;
   }
