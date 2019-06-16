@@ -90,8 +90,8 @@ function searchOnEnterOrCloseModal(e) {
   if (e.key === 'Enter' && !modal) {
     search();
   } else if (e.key === 'Enter' && modal) {
-    const monitor = document.querySelector('.monitor');
-    monitor.style.display = 'block';
+    // const monitor = document.querySelector('.monitor');
+    // monitor.style.display = 'block';
     modal.remove();
   }
 }

@@ -1,6 +1,6 @@
 export default function showModal(message) {
-  const monitor = document.querySelector('.monitor');
-  monitor.style.display = 'none';
+  // const monitor = document.querySelector('.monitor');
+  // monitor.style.display = 'none';
 
   const modal = document.createElement('div');
   modal.classList.add('modal');
@@ -12,7 +12,7 @@ export default function showModal(message) {
 
   const closeModalButton = document.body.querySelector('.modal__close');
   closeModalButton.addEventListener('click', () => {
-    monitor.style.display = 'block';
+    // monitor.style.display = 'block';
     modal.remove();
   });
 }

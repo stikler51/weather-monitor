@@ -17,7 +17,9 @@
   width: 100vw;
   height: 100vh;
   overflow: hidden;
-  background: url("assets/pictures/740.jpg") no-repeat fixed;
+  background: url("assets/pictures/740.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   background-size: cover;
   transition: 0.5s;
 
