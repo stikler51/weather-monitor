@@ -4,7 +4,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.4);
   z-index: 1000;
   display: flex;
   justify-content: center;
@@ -14,23 +14,31 @@
 .modal__window {
   width: 70%;
   height: 50%;
-  background: white url("assets/pictures/validation-error.jpg");
+  background: rgba(255, 255, 255, 0.4) url("assets/pictures/validation-error.png");
   background-repeat: no-repeat;
   background-position: right;
   background-size: contain;
+  position: absolute;
+  border-radius: 10px;
+  color: white;
 
   .message {
     width: 60%;
+    height: 100%;
     padding-top: 40px;
     padding-left: 40px;
+    position: relative;
 
     .modal__close {
       width: 80px;
       height: 40px;
       margin-top: 40px;
-      float: right;
-      background: white;
-      border: 2px solid grey;
+      position: absolute;
+      bottom: 80px;
+      right: 40px;
+      background: transparent;
+      color: white;
+      border: 2px solid white;
       transition: 0.4s;
 
       &:hover {
