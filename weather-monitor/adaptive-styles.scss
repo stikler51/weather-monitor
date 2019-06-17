@@ -4,6 +4,9 @@
   }
 
   .body {
+    min-height: 100vh;
+    position: absolute;
+
     .header {
       flex-wrap: wrap;
 
@@ -71,7 +74,6 @@
 
   .modal {
     width: 100vw;
-    height: 100vh;
 
     .modal__window {
       width: 90vw;
