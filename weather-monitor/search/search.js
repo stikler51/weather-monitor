@@ -8,7 +8,7 @@ const validationModalMessage = '<p>Looks like something went wrong.</p>'
   + '<p>You can search only Minsk, Warszaw, Berlin and Paris</p>'
   + '<p>To disable validation check "Disable validation" checkbox.</p>';
 
-const validatedValues = ['minsk', 'warszaw', 'berlin', 'paris'];
+const validatedValues = ['minsk', 'warsaw', 'berlin', 'paris'];
 
 async function getResponse(q) {
   const request = `https://api.openweathermap.org/data/2.5/weather?q=${q}&appid=${apiKey}&units=metric`;
