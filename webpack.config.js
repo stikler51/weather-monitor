@@ -3,7 +3,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const autoprefixer = require('autoprefixer');
 
 module.exports = {
-  entry: './weather-monitor/app.js',
+  entry: ['@babel/polyfill', 'whatwg-fetch', './weather-monitor/app.js'],
   output: {
     filename: 'app.bundle.js',
     path: path.resolve(__dirname, 'dist'),

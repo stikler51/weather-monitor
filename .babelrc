@@ -4,9 +4,10 @@
       "@babel/preset-env",
       {
         "targets": {
-          "chrome": "72"
-//          "ie": "11"
-        }
+          "chrome": "72",
+          "ie": "10"
+        },
+        "useBuiltIns": "entry"
       }
     ]
   ],

@@ -1,4 +1,4 @@
-/* eslint-disable no-use-before-define */
+/* eslint-disable no-use-before-define,null */
 import State from '../state/state';
 import showModal from '../modal/modal';
 
@@ -12,8 +12,10 @@ const validatedValues = ['minsk', 'warsaw', 'berlin', 'paris'];
 
 async function getResponse(q) {
   const request = `https://api.openweathermap.org/data/2.5/weather?q=${q}&appid=${apiKey}&units=metric`;
+
   const response = await fetch(request)
     .then(resp => resp.json());
+
   return response;
 }
 

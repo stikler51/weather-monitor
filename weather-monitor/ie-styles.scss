@@ -1,0 +1,33 @@
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  .body {
+    .header {
+      .search {
+        .search__button {
+          height: 100%!important;
+        }
+      }
+    }
+    .main {
+      .monitor {
+        display: none;
+        position: static!important;
+        background: rgba(0, 0, 0, 0.4);
+
+        &::before {
+          content: none;
+        }
+      }
+
+      .visible-ie {
+        display: block!important;
+      }
+    }
+
+    .modal {
+      .modal__window {
+        top: 30%;
+        left: 15%;
+      }
+    }
+  }
+}

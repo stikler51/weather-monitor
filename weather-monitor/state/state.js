@@ -101,9 +101,6 @@ export default class State {
       monitor.classList.remove('fadeInRight');
       monitor.classList.add('fadeOutLeft', 'faster');
       monitor.addEventListener('animationend', changeMonitor);
-    } else {
-      monitor.classList.add('animated', 'fadeInRight');
-      isFirstSearch = false;
     }
 
     const city = document.body.querySelector('.city');
@@ -126,9 +123,11 @@ export default class State {
     // const monitor = document.body.querySelector('.monitor');
     // monitor.style.display = 'block';
     //
-    // if (isFirstSearch) {
-    //   monitor.classList.add('animated');
-    //   monitor.classList.add('fadeInRight');
-    // }
+    if (isFirstSearch) {
+      monitor.classList.add('animated');
+      monitor.classList.add('visible-ie');
+      monitor.classList.add('fadeInRight');
+      isFirstSearch = false;
+    }
   }
 }
