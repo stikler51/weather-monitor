@@ -16,6 +16,7 @@
   //}
 }
 
+@import "animate.css";
 @import "modal/modal";
 @import "adaptive-styles";
 @import url('https://fonts.googleapis.com/css?family=Quicksand:300&display=swap');
@@ -142,7 +143,8 @@
     background: inherit;
     position: absolute;
     overflow: hidden;
-    display: none;
+    opacity: 0;
+    //display: none;
 
     &:before{
       content: '';

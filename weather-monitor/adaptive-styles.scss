@@ -104,75 +104,75 @@
   }
 }
 
-@media screen and (max-height: 768px) and (orientation: landscape) {
-  html {
-    font-size: 11px;
-  }
+@media screen and (max-height: 768px) and (max-width: 1023px) and (orientation: landscape) {
+    html {
+      font-size: 11px;
+    }
 
-  .body {
-    .header {
-      flex-wrap: wrap;
-      padding-top: 0!important;
+    .body {
+      .header {
+        flex-wrap: wrap;
+        padding-top: 0!important;
 
-      .title,
-      .search {
-        width: 100%;
-      }
-
-      .title {
-        text-align: center;
-        font-size: 3rem;
-      }
-
-      .search {
-        margin-top: 3vh;
-        display: flex;
-        justify-content: center;
-
-        .search__button {
-          height: 100%;
+        .title,
+        .search {
+          width: 100%;
         }
 
-        .search__field {
-          height: 8vh;
+        .title {
+          text-align: center;
+          font-size: 3rem;
+        }
+
+        .search {
+          margin-top: 3vh;
+          display: flex;
+          justify-content: center;
+
+          .search__button {
+            height: 100%;
+          }
+
+          .search__field {
+            height: 8vh;
+            width: 60vw;
+            margin-left: 50px;
+          }
+        }
+
+        .validation {
+          margin-top: 2vh;
+        }
+      }
+
+      .main {
+        background: none;
+        height: 65vh;
+
+        .monitor {
           width: 60vw;
-          margin-left: 50px;
+
+          .monitor__left {
+            width: 30vw;
+          }
+
+          .monitor__right{
+            width: 30vw;
+          }
         }
       }
+      .modal {
+        .modal__window {
+          .message {
+            padding: 20px;
 
-      .validation {
-        margin-top: 2vh;
-      }
-    }
-
-    .main {
-      background: none;
-      height: 65vh;
-
-      .monitor {
-        width: 60vw;
-
-        .monitor__left {
-          width: 30vw;
-        }
-
-        .monitor__right{
-          width: 30vw;
-        }
-      }
-    }
-    .modal {
-      .modal__window {
-        .message {
-          padding: 20px;
-
-          .modal__close {
-            width: 60px;
-            height: 30px;
-            bottom: 60px;
+            .modal__close {
+              width: 60px;
+              height: 30px;
+              bottom: 60px;
+            }
           }
         }
       }
     }
-  }
 }

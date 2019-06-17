@@ -17,6 +17,15 @@ import warm from '../assets/pictures/bg/20.jpg';
 import hot from '../assets/pictures/bg/30.jpg';
 import hell from '../assets/pictures/bg/40.jpg';
 
+let isFirstSearch = true;
+
+function changeMonitor() {
+  const monitor = document.body.querySelector('.monitor');
+  monitor.classList.remove('fadeOutLeft');
+  monitor.classList.remove('faster');
+  monitor.classList.add('fadeInRight');
+}
+
 function updateIcon(status) {
   const container = document.body.querySelector('.monitor__left');
   const oldIcon = document.body.querySelector('.weather-icon');
@@ -86,6 +95,17 @@ export default class State {
   }
 
   updateState() {
+    const monitor = document.body.querySelector('.monitor');
+
+    if (!isFirstSearch) {
+      monitor.classList.remove('fadeInRight');
+      monitor.classList.add('fadeOutLeft', 'faster');
+      monitor.addEventListener('animationend', changeMonitor);
+    } else {
+      monitor.classList.add('animated', 'fadeInRight');
+      isFirstSearch = false;
+    }
+
     const city = document.body.querySelector('.city');
     city.innerHTML = this.city;
 
@@ -103,7 +123,12 @@ export default class State {
     weatherStatus.innerHTML = this.weatherStatus;
     updateIcon(this.weatherStatus);
 
-    const monitor = document.body.querySelector('.monitor');
-    monitor.style.display = 'block';
+    // const monitor = document.body.querySelector('.monitor');
+    // monitor.style.display = 'block';
+    //
+    // if (isFirstSearch) {
+    //   monitor.classList.add('animated');
+    //   monitor.classList.add('fadeInRight');
+    // }
   }
 }
