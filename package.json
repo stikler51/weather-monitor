@@ -19,6 +19,8 @@
   },
   "homepage": "https://github.com/rolling-scopes-school/stikler51-2019Q1#readme",
   "dependencies": {
+    "autoprefixer": "^9.6.0",
+    "postcss-loader": "^3.0.0",
     "svg-url-loader": "^2.3.2"
   },
   "devDependencies": {

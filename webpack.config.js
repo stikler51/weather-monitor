@@ -1,5 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const autoprefixer = require('autoprefixer');
 
 module.exports = {
   entry: './weather-monitor/app.js',
@@ -13,7 +14,7 @@ module.exports = {
       { enforce: 'pre', test: /\.js$/, loader: 'eslint-loader' },
       {
         test: /\.html$/,
-        loader: 'html-loader'
+        loader: 'html-loader',
       },
       {
         test: /\.js$/,
@@ -24,14 +25,35 @@ module.exports = {
       },
       {
         test: /\.scss$/,
-        use: ['style-loader', 'css-loader', 'sass-loader'],
+        use: [
+          {
+            loader: 'style-loader',
+          },
+          {
+            loader: 'css-loader',
+          },
+          {
+            loader: 'postcss-loader',
+            options: {
+              plugins: [
+                autoprefixer({
+                  browsers: ['ie >= 8', 'last 4 version'],
+                }),
+              ],
+              sourceMap: true,
+            },
+          },
+          {
+            loader: 'sass-loader',
+          },
+        ],
       },
       {
         test: /\.css$/,
-        use: ['style-loader', 'css-loader',],
+        use: ['style-loader', 'css-loader'],
       },
       {
-        test: /\.(ttf|svg)$/,
+        test: /\.(ttf|svg|woff2|woff|eot)$/,
         use: [
           {
             loader: 'file-loader',
@@ -52,19 +74,19 @@ module.exports = {
           {
             loader: 'url-loader',
             options: {
-              limit: 8192
-            }
-          }
-        ]
-      }
+              limit: 8192,
+            },
+          },
+        ],
+      },
     ],
   },
   devServer: {
     contentBase: path.join(__dirname, 'dist'),
-    port: 9000
+    port: 9000,
   },
   plugins: [new HtmlWebpackPlugin({
-    'meta': {'viewport': 'width=device-width, initial-scale=1'},
-    template: './index.html'
+    meta: { viewport: 'width=device-width, initial-scale=1' },
+    template: './index.html',
   })],
 };

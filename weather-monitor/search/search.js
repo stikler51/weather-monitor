@@ -5,7 +5,7 @@ import showModal from '../modal/modal';
 const apiKey = 'a37fd266dcf0de1f7a2a058e96a7cabe';
 
 const validationModalMessage = '<p>Looks like something went wrong.</p>'
-  + '<p>You can search only Minsk, Warszaw, Berlin and Paris</p>'
+  + '<p>You can search only Minsk, Warsaw, Berlin and Paris</p>'
   + '<p>To disable validation check "Disable validation" checkbox.</p>';
 
 const validatedValues = ['minsk', 'warsaw', 'berlin', 'paris'];
