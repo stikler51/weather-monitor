@@ -1,0 +1,179 @@
+@media screen and (max-width: 768px) and (orientation: portrait) {
+  html {
+    font-size: 13px;
+  }
+
+  .body {
+    .header {
+      flex-wrap: wrap;
+
+      .title,
+      .search {
+        width: 100%;
+      }
+
+      .title {
+        text-align: center;
+        font-size: 3rem;
+      }
+
+      .search {
+        margin-top: 3vh;
+        display: flex;
+        justify-content: center;
+
+        .search__button {
+          height: 100%;
+        }
+
+        .search__field {
+          height: 4vh;
+          width: 60vw;
+          margin-left: 50px;
+        }
+      }
+      .validation {
+        margin-top: 2vh;
+      }
+    }
+
+    .main {
+      background: none;
+      .monitor {
+        width: 80vw;
+        height: 50vh;
+
+        .monitor__left {
+          width: 80vw;
+          height: 25vh;
+
+          .weather-icon {
+            width: 60%;
+          }
+        }
+
+        .monitor__right {
+          width: 80vw;
+          height: 25vh;
+          position: absolute;
+          top: unset;
+          bottom: 0;
+
+          .monitor__temperature {
+            .temperature {
+              font-size: 8rem;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .modal {
+    width: 100vw;
+    height: 100vh;
+
+    .modal__window {
+      width: 90vw;
+      height: 40vh;
+      background: rgba(0, 0, 0, 0.4);
+
+      .message {
+        padding: 20px;
+        text-align: center;
+        width: 80vw;
+        line-height: 2rem;
+        font-size: 1.3rem;
+      }
+    }
+  }
+
+  @media screen and (max-width: 350px) {
+    html {
+      font-size: 10px;
+    }
+
+    .body {
+      .header {
+        .search {
+          .search__field {
+            width: 50vw;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-height: 768px) and (orientation: landscape) {
+  html {
+    font-size: 11px;
+  }
+
+  .body {
+    .header {
+      flex-wrap: wrap;
+      padding-top: 0!important;
+
+      .title,
+      .search {
+        width: 100%;
+      }
+
+      .title {
+        text-align: center;
+        font-size: 3rem;
+      }
+
+      .search {
+        margin-top: 3vh;
+        display: flex;
+        justify-content: center;
+
+        .search__button {
+          height: 100%;
+        }
+
+        .search__field {
+          height: 8vh;
+          width: 60vw;
+          margin-left: 50px;
+        }
+      }
+
+      .validation {
+        margin-top: 2vh;
+      }
+    }
+
+    .main {
+      background: none;
+      height: 65vh;
+
+      .monitor {
+        width: 60vw;
+
+        .monitor__left {
+          width: 30vw;
+        }
+
+        .monitor__right{
+          width: 30vw;
+        }
+      }
+    }
+    .modal {
+      .modal__window {
+        .message {
+          padding: 20px;
+
+          .modal__close {
+            width: 60px;
+            height: 30px;
+            bottom: 60px;
+          }
+        }
+      }
+    }
+  }
+}
